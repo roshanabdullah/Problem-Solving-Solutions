@@ -118,3 +118,32 @@ def quicksort(arr):
         return quicksort(left) + middle + quicksort(right)
 
 print(quicksort([1, 56, 3]))
+
+# sort array in ascending order and then find the middle no
+def quicksort(arr):
+    if len(arr) <= 1:
+        return arr
+    else:
+        pivot = arr[len(arr) // 2]
+    
+        left = [x for x in arr if x < pivot]
+        middle = [x for x in arr if x == pivot]
+        right = [x for x in arr if x > pivot]
+        return quicksort(left) + middle + quicksort(right)
+       
+    
+numbers = [7,6,4,2,8,5]   
+sorted_list = quicksort(numbers)
+
+def findSortedMiddleNum(num):
+    middle_index = len(num) // 2
+    # If the list has an odd number of elements, the middle element is the one at the middle index
+    if len(num) % 2 == 1:
+        middle_number = num[middle_index]
+    # If the list has an even number of elements, the middle element is the average of the two middle elements
+    elif len(num) % 2 == 0:
+        middle_number = (num[middle_index - 1] + num[middle_index]) / 2
+        
+    print(middle_number)
+    
+findSortedMiddleNum(sorted_list)
