@@ -54,3 +54,14 @@ def checkPalindromeOfString(s):
         print(f"{original_string} is not a palindrome")
     
 checkPalindromeOfString(['a', 'b'])
+
+# Calculate total number of numerical digits in a string or total characters
+def calNumOfNumericalDigitsOrCharactersInString(s):
+    numericalCount = 0;
+    characterCount = 0;
+    for char in s:
+        if char.isdigit():
+            numericalCount += 1
+        characterCount = characterCount + 1
+        
+calNumOfNumericalDigitsOrCharactersInString(['a','b','c', '1', '2', '.'])
