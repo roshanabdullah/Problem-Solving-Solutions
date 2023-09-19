@@ -65,3 +65,28 @@ def calNumOfNumericalDigitsOrCharactersInString(s):
         characterCount = characterCount + 1
         
 calNumOfNumericalDigitsOrCharactersInString(['a','b','c', '1', '2', '.'])
+
+# Finding min and maximum number
+# function method
+def findMaxNum(s):
+    print(max(s))
+    print(min(s))
+    
+    
+findMaxNum([1, 2, 3,2])
+
+# vanilla method
+def findMaxNum(s):
+    
+    max_num = s[0]
+    min_num = s[0]
+    for num in s[1:]:
+        if num > max_num:
+            max_num = num
+        elif num < min_num:
+            min_num = num
+            
+    print(max_num)
+    print(min_num)
+        
+findMaxNum([5, 2, 3])
