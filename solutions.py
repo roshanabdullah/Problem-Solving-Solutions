@@ -147,3 +147,19 @@ def findSortedMiddleNum(num):
     print(middle_number)
     
 findSortedMiddleNum(sorted_list)
+
+
+# Finding anagrams of strings
+def findAnegrams(s1, s2):
+    str1 = "".join(s1)
+    str2 = "".join(s2)
+    
+    if len(str1) != len(str2):
+        print("string are not anegram due to unmatching length")
+    else:
+        if sorted(str1) == sorted(str2):
+            print("anegrams")
+        else:
+            print("not anegram")
+    
+findAnegrams(['a', 'b', 'c'], ['c', 'b', 'a'])
