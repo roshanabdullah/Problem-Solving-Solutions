@@ -1,10 +1,19 @@
-# Reverse a string
-def reverseString(a):
-    reversedString = ''
-    for char in a:
-        reversedString = char + reversedString
-    print(reversedString)    
-reverseString('abc')
+# reverse characters format 1 using string
+def reverseChar(s):
+    reversed_String = ""
+    for char in s:
+        reversed_String = char + reversed_String
+    return reversed_String
+print(reverseChar(['a', 'b', 'c']))
+
+# reverse characters format 2 using list 
+def reverseChar(s):
+    reversed_String = []
+    for char in s:
+        reversed_String.insert(0, char)
+    return reversed_String
+
+print(reverseChar(['a', 'b', 'c']))
 
 # Get even or odd
 def getEvenAndOdd(numbers):
